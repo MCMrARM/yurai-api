@@ -1,4 +1,4 @@
-#include <yurai.h>
+#include <yurai/hook.h>
 
 void yurai_add_library(void *lib) {}
 void yurai_remove_library(void *lib) {}
