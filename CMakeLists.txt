@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
 
-project(yurai C)
-
-add_library(yurai SHARED stub/yurai.c)
-target_include_directories(yurai PUBLIC include)
+add_library(yurai INTERFACE IMPORTED)
+set_property(TARGET yurai PROPERTY INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_LIST_DIR}/include")
+set_property(TARGET yurai PROPERTY INTERFACE_LINK_LIBRARIES "${CMAKE_CURRENT_LIST_DIR}/libs/${ANDROID_ABI}/libyurai.so")
